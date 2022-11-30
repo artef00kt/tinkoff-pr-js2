@@ -43,5 +43,21 @@ describe('es6', () => {
             // TODO
             assert.strictEqual(!!dic, true);
         });
+
+        it('на несуществвующий ключ возвращается undefined', () => {
+            const dic = new core.Dictionary();
+
+            assert.strictEqual(dic.get(1), undefined);
+            assert.strictEqual(dic.get("b"), undefined);
+        });
+
+        it('на существвующий ключ возвращается его значение', () => {
+            const dic = new core.Dictionary();
+            dic.push("aba", "aba");
+            dic.push("bab", "bab");
+
+            assert.strictEqual(dic.get("aba"), "aba");
+            assert.strictEqual(dic.get("bab"), "bab");
+        });
     });
 });
