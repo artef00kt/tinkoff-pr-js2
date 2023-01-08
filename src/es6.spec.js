@@ -53,11 +53,18 @@ describe('es6', () => {
 
         it('на существвующий ключ возвращается его значение', () => {
             const dic = new core.Dictionary();
-            dic.push("aba", "aba");
-            dic.push("bab", "bab");
+            dic.set("aba", "aba");
+            dic.set("bab", "bab");
 
             assert.strictEqual(dic.get("aba"), "aba");
             assert.strictEqual(dic.get("bab"), "bab");
+        });
+
+        it('не строку добавить не получится', () => {
+            const dic = new core.Dictionary();
+            dic.set(9, 3);
+
+            assert.strictEqual(dic.get(9), undefined);
         });
     });
 });
