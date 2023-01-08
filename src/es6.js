@@ -42,13 +42,12 @@ function calculateSalaryDifference(array)
 // * покройте класс тестами
 class Dictionary 
 {
-    _data;
     constructor()
     {
         this._data = new Map();
     }
 
-    push(key, data)
+    set(key, data)
     {
         if((typeof key === "string") && (typeof data === "string"))
         {

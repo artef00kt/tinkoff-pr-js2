@@ -5,9 +5,6 @@
  */
 class Point 
 {
-    x;
-    y;
-
     constructor(x = 0, y = 0)
     {
         this.x = x;
@@ -27,7 +24,6 @@ class Point
  */
 class Point3D extends Point 
 {
-    z;
     constructor(x = 0, y = 0, z = 0)
     {
         super(x, y);
@@ -47,7 +43,6 @@ class Point3D extends Point
  */
 class Queue 
 {
-    _data = [];
     constructor (data = [])
     {
         this._data = data;
